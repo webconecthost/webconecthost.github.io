@@ -15,15 +15,9 @@
 
     <!-- Load Critical Styles Inline -->
     <style>
-        /* Add just enough CSS to prevent FOUC (Flash of Unstyled Content) */
         body {
-            font-family: Arial, sans-serif;
             background: #fff;
-            color: #333;
-            visibility: hidden; /* Hide until styles load */
-        }
-        .navbar, .container {
-            opacity: 0;
+            visibility: hidden; 
         }
     </style>
 
@@ -36,8 +30,6 @@
         // Make the page visible only after styles are loaded
         window.addEventListener('load', function() {
             document.body.style.visibility = 'visible';
-            document.querySelector('.navbar').style.opacity = '1';
-            document.querySelector('.container').style.opacity = '1';
         });
     </script>
 </head>
