@@ -8,20 +8,44 @@
     <!-- SITE TITLE -->
     <title>Website Media</title>
 
+    <!-- Preconnect for Faster Loading -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
     <!-- Preload Important Assets -->
     <link rel="preload" href="css/bootstrap.min.css" as="style">
     <link rel="preload" href="css/font-awesome.min.css" as="style">
     <link rel="preload" href="css/templatemo-style.css" as="style">
 
-    <!-- Async Loading CSS -->
-    <link rel="stylesheet" href="css/bootstrap.min.css" media="print" onload="this.onload=null;this.media='all'">
-    <link rel="stylesheet" href="css/font-awesome.min.css" media="print" onload="this.onload=null;this.media='all'">
-    <link rel="stylesheet" href="css/templatemo-style.css" media="print" onload="this.onload=null;this.media='all'">
-    <noscript>
-        <link rel="stylesheet" href="css/bootstrap.min.css">
-        <link rel="stylesheet" href="css/font-awesome.min.css">
-        <link rel="stylesheet" href="css/templatemo-style.css">
-    </noscript>
+    <!-- Critical CSS for Faster First Paint -->
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #fff;
+            color: #333;
+            opacity: 0;
+            transition: opacity 0.3s ease-in-out;
+        }
+        .navbar {
+            background-color: #222;
+            padding: 10px;
+        }
+        .tm-home-title {
+            font-size: 2em;
+            font-weight: bold;
+        }
+    </style>
+
+    <!-- Load Full Stylesheets -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/templatemo-style.css">
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            document.body.style.opacity = "1";
+        });
+    </script>
 </head>
 <body data-spy="scroll" data-target="#rock-navigation">
 
