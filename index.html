@@ -8,42 +8,36 @@
     <!-- SITE TITLE -->
     <title>Website Media</title>
 
-    <!-- Preconnect for Faster Loading -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-
     <!-- Preload Important Assets -->
     <link rel="preload" href="css/bootstrap.min.css" as="style">
     <link rel="preload" href="css/font-awesome.min.css" as="style">
     <link rel="preload" href="css/templatemo-style.css" as="style">
 
-    <!-- Critical CSS for Faster First Paint -->
+    <!-- Load Critical Styles Inline -->
     <style>
+        /* Add just enough CSS to prevent FOUC (Flash of Unstyled Content) */
         body {
             font-family: Arial, sans-serif;
-            background-color: #fff;
+            background: #fff;
             color: #333;
+            visibility: hidden; /* Hide until styles load */
+        }
+        .navbar, .container {
             opacity: 0;
-            transition: opacity 0.3s ease-in-out;
-        }
-        .navbar {
-            background-color: #222;
-            padding: 10px;
-        }
-        .tm-home-title {
-            font-size: 2em;
-            font-weight: bold;
         }
     </style>
 
-    <!-- Load Full Stylesheets -->
+    <!-- Load Styles Normally -->
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="stylesheet" href="css/font-awesome.min.css">
     <link rel="stylesheet" href="css/templatemo-style.css">
 
     <script>
-        document.addEventListener("DOMContentLoaded", function () {
-            document.body.style.opacity = "1";
+        // Make the page visible only after styles are loaded
+        window.addEventListener('load', function() {
+            document.body.style.visibility = 'visible';
+            document.querySelector('.navbar').style.opacity = '1';
+            document.querySelector('.container').style.opacity = '1';
         });
     </script>
 </head>
