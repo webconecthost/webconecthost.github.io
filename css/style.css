@@ -101,11 +101,11 @@ hr {
 }
 .tm-home-title { 
   padding-top: 50px;
-  width: 350px;
+  width: 375px;
   height: auto;
 }
 .tm-home-subtitle {
-  font-size: 30px; 
+  font-size: 26px; 
   color: #eb5424;
   font-weight: bold;
   padding-bottom: 40px;
@@ -362,30 +362,41 @@ hr {
 /* END PORTFOLIO */
 
 /* START RESUME */
+.tm-resume { 
+  padding: 3rem 0;
+  padding-top: 100px;
+  padding-bottom: 100px;
+  margin-left: auto;
+  margin-right: auto;
+}
 .tm-red-text { 
   color: #eb5424; 
 }
-.tm-info-label {
-  font-weight: bold;
-  display: inline-block;
-  width: 90px;
+.res-container {
+  width: 80%;
+  display: flex;
+  justify-content: space-between;
+  margin-left: auto;
+  margin-right: auto;
+  flex-wrap: wrap; 
 }
-.tm-progress {
-  background: #fff;
-  border-radius: 2px;
-  height: 4px;
+.res-column1 {
+  width: 50%;
+  max-width: 50%;
+  justify-items: center;
 }
-.progress-bar-danger { background: #eb5424; }
-.tm-progress-label {
-  font-size: 12px;
-  font-weight: bold;
-  padding-top: 10px;
-  text-transform: uppercase;
+.res-column2 {
+  width: 50%;
+  max-width: 50%;
+  justify-items: left;
 }
-.progress-percent-small {
-  display: block;
-  float: right;
-  padding-right: 80px;
+.profile-image {
+  width: 210px;
+  height: 210px;
+  border-radius: 50%;
+  border: 3px solid white;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+  object-fit: cover;
 }
 /* END RESUME */
 
@@ -402,6 +413,14 @@ hr {
 
 /* START CONTACT */
 .tm-contact {
+  background: url('../images/contact-bg.jpg');
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: center center;
+  width: 100%;
+  padding: 3rem 0;
+}
+.tm-contact-content {
   width: 80%;
   margin-left: auto;
   margin-right: auto;
@@ -506,7 +525,6 @@ hr {
   display: flex;             
   justify-content: center;    
 }
-
 /* END CONTACT */
 
 @media screen and (max-device-width: 1024px){
@@ -519,8 +537,8 @@ hr {
 @media screen and (max-width:1023px){
   .portfolio-overlay  { padding-top: 10px; }
   .navbar-default .navbar-brand { padding-top: 2px; }
-  .tm-home-title {   width: 300px; height: auto; padding-top: 75px; }
-  .tm-home-subtitle { font-size: 25px; }
+  .tm-home-title {   width: 320px; height: auto; padding-top: 75px; }
+  .tm-home-subtitle { font-size: 24px; }
   .work-title { font-size: 45px;}
   .title { font-size: 45px; }
   .tm-red-text { font-size: 45px; }
@@ -536,8 +554,8 @@ hr {
 @media screen and (max-width:767px){
   .portfolio-overlay  { padding-top: 10px; }
   .navbar-default .navbar-brand { padding-top: 2px; }
-  .tm-home-title {   width: 250px; height: auto; padding-top: 75px; }
-  .tm-home-subtitle { font-size: 25px; }
+  .tm-home-title {   width: 280px; height: auto; padding-top: 75px; }
+  .tm-home-subtitle { font-size: 22px; }
   .work-title { font-size: 40px; padding-bottom: 10px;}
   .title { font-size: 40px; padding-bottom: 10px;}
   .tm-red-text { font-size: 40px; padding-bottom: 10px;} 
@@ -552,7 +570,7 @@ hr {
 /* START MEDIA 479 */
 @media screen and (max-width:479px){
   .navbar-default .navbar-brand { padding-top: 2px; }
-  .tm-home-title {   width: 200px; height: auto; padding-top: 100px; }
+  .tm-home-title {   width: 220px; height: auto; padding-top: 100px; }
   .tm-home-subtitle { font-size: 20px; }
   .work-title { font-size: 30px; padding-bottom: 10px; }
   .title { font-size: 30px; padding-bottom: 10px; }
