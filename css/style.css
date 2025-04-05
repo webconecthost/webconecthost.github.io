@@ -99,6 +99,11 @@ hr {
   text-align: center;  
   height: 100vh;
 }
+.tm-menu-title { 
+  padding-top: 10px;
+  width: 150px;
+  height: auto;
+}
 .tm-home-title { 
   padding-top: 50px;
   width: 375px;
@@ -133,6 +138,10 @@ hr {
 .tm-padding-top-bottom-100 {
   padding-top: 100px;
   padding-bottom: 100px;
+}
+.tm-padding-top-bottom-50 {
+  padding-top: 100px;
+  padding-bottom: 50px;
 }
 .tm-work-h3 {
   color: #eb5424;
@@ -369,9 +378,6 @@ hr {
   margin-left: auto;
   margin-right: auto;
 }
-.tm-red-text { 
-  color: #eb5424; 
-}
 .res-container {
   width: 80%;
   display: flex;
@@ -384,6 +390,7 @@ hr {
   width: 50%;
   max-width: 50%;
   justify-items: center;
+  padding-right: 20px;
 }
 .res-column2 {
   width: 50%;
@@ -391,25 +398,52 @@ hr {
   justify-items: left;
 }
 .profile-image {
-  width: 210px;
-  height: 210px;
+  width: 150px;
+  height: 150px;
   border-radius: 50%;
   border: 3px solid white;
   box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
   object-fit: cover;
 }
+.resume-title1st {
+  color: #303030;
+  font-size: 60px;
+  padding-bottom: 40px;
+  text-transform: uppercase;
+  text-align: center;
+}
+.resume-title2nd {
+  color: #303030;
+  text-transform: uppercase;
+  text-align: center;
+}
+.resume-title3rd {
+  color: #eb5424; 	
+  text-transform: uppercase;
+  padding-bottom: 40px;
+}
 /* END RESUME */
 
-/* START ABOUT */
-.tm-about {
-  background: url('../images/about-bg.jpg');
+/* START MENTENANTA */
+.tm-mentenanta {
+  background: url('../images/mentenanta-bg.jpg');
   background-size: cover;
   background-attachment: fixed;
   background-position: center center;
   padding-top: 60px;
   padding-bottom: 100px;
 }
-/* END ABOUT */
+.mentenanta-title1st {
+  color: #eb5424;
+  text-transform: uppercase;
+  padding-bottom: 10px;
+}
+.mentenanta-title2nd {
+  color: #303030;
+  text-transform: uppercase;
+  padding-bottom: 20px;
+}
+/* END MENTENANTA */
 
 /* START CONTACT */
 .tm-contact {
@@ -456,13 +490,15 @@ hr {
 }
 .box-contact-more {
   display: flex;
-  gap: 2rem;
+  gap: 1rem;
   flex-wrap: wrap; 
+  flex-wrap: nowrap;
+  align-items: flex-start; 
 }
 .icon-contact-more {
-	margin-top: 12px;
-	width: 50px;
-	height: 50px;	
+	margin-top: 16px;
+	width: 40px;
+	height: 40px;	
 }
 .text-contact-more-title {
   font-size: 20px;
@@ -525,6 +561,9 @@ hr {
   display: flex;             
   justify-content: center;    
 }
+.contact-subtitle {
+  color: #eb5424; 	
+}
 /* END CONTACT */
 
 @media screen and (max-device-width: 1024px){
@@ -541,12 +580,11 @@ hr {
   .tm-home-subtitle { font-size: 24px; }
   .work-title { font-size: 45px;}
   .title { font-size: 45px; }
-  .tm-red-text { font-size: 45px; }
   .title2nd { font-size: 45px; }
   .form-group-container, .icons-contact-container {
     width: 100%;
     max-width: 100%;  
-  }	
+  }
 }
 /* END MEDIA 1023 */
 
@@ -558,11 +596,21 @@ hr {
   .tm-home-subtitle { font-size: 22px; }
   .work-title { font-size: 40px; padding-bottom: 10px;}
   .title { font-size: 40px; padding-bottom: 10px;}
-  .tm-red-text { font-size: 40px; padding-bottom: 10px;} 
   .title2nd { font-size: 40px; padding-top: 70px; padding-bottom: 10px;}
+  .resume-title1st { font-size: 50px; }
   .form-group-container, .icons-contact-container {
     width: 100%;
     max-width: 100%; 
+  }  
+  .res-column1 {
+    width: 100%;
+    max-width: 100%; 
+  }
+  .res-column2 {
+	padding-top: 30px;
+    width: 100%;
+    max-width: 100%;
+	justify-items: center;
   }  
 }
 /* END MEDIA 767 */
@@ -574,9 +622,22 @@ hr {
   .tm-home-subtitle { font-size: 20px; }
   .work-title { font-size: 30px; padding-bottom: 10px; }
   .title { font-size: 30px; padding-bottom: 10px; }
-  .tm-red-text { font-size: 30px; padding-bottom: 10px; } 
   .title2nd { font-size: 30px; padding-top: 70px; padding-bottom: 10px; }
-  .box-contact-more {flex-direction: column; }
+  .resume-title1st { font-size: 45px; }
+  .form-group-container, .icons-contact-container {
+    width: 100%;
+    max-width: 100%; 
+  }  
+  .res-column1 {
+    width: 100%;
+    max-width: 100%; 
+  }
+  .res-column2 {
+	padding-top: 30px;
+    width: 100%;
+    max-width: 100%;
+	justify-items: center;
+  }   
 }
 /* END MEDIA 479 */
 
@@ -587,8 +648,22 @@ hr {
   .tm-home-subtitle { font-size: 15px; }
   .work-title { font-size: 30px; padding-bottom: 10px; }
   .title { font-size: 30px; padding-bottom: 10px; }
-  .tm-red-text { font-size: 30px; padding-bottom: 10px; }
   .title2nd { font-size: 30px; padding-top: 70px; padding-bottom: 10px;}
   .box-contact-more {flex-direction: column; }
+  .resume-title1st { font-size: 40px; }   
+  .form-group-container, .icons-contact-container {
+    width: 100%;
+    max-width: 100%; 
+  }  
+  .res-column1 {
+    width: 100%;
+    max-width: 100%; 
+  }
+  .res-column2 {
+	padding-top: 30px;
+    width: 100%;
+    max-width: 100%;
+	justify-items: center;
+  }    
 }
 /* END MEDIA 300 */
