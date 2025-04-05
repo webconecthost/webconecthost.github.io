@@ -234,8 +234,9 @@ hr {
 
 /* START PORTFOLIO */
 .tm-portfolio {
-  background: #f8f8f8;
-  padding-top: 80px;
+  background: #F0F0F0;
+  padding-top: 40px;
+  padding-bottom: 80px;
 }
 .tm-portfolio .container {
   width: 100%;
@@ -352,6 +353,7 @@ hr {
 .iso-box {
   position: relative;
   min-height: 50px;
+  max-height: 225px;
   float: left;
   overflow: hidden;
   margin-bottom: 20px;
