@@ -586,6 +586,7 @@ hr {
   .form-group-container, .icons-contact-container {
     width: 100%;
     max-width: 100%;  
+	padding: 30px;
   }
 }
 /* END MEDIA 1023 */
@@ -603,10 +604,12 @@ hr {
   .form-group-container, .icons-contact-container {
     width: 100%;
     max-width: 100%; 
+	padding: 10px;
   }  
   .res-column1 {
     width: 100%;
-    max-width: 100%; 
+    max-width: 100%;
+	justify-items: center;
   }
   .res-column2 {
 	padding-top: 30px;
@@ -628,11 +631,13 @@ hr {
   .resume-title1st { font-size: 45px; }
   .form-group-container, .icons-contact-container {
     width: 100%;
-    max-width: 100%; 
+    max-width: 100%;
+	padding: 1px;
   }  
   .res-column1 {
     width: 100%;
-    max-width: 100%; 
+    max-width: 100%;
+	justify-items: center;
   }
   .res-column2 {
 	padding-top: 30px;
@@ -656,10 +661,12 @@ hr {
   .form-group-container, .icons-contact-container {
     width: 100%;
     max-width: 100%; 
+	padding: 1px;
   }  
   .res-column1 {
     width: 100%;
-    max-width: 100%; 
+    max-width: 100%;
+	justify-items: center;
   }
   .res-column2 {
 	padding-top: 30px;
