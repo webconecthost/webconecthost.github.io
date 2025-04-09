@@ -10,9 +10,9 @@ html, body {
   overflow-x: hidden;
   font-size: 93%;
 }
-h1,h2,h3 { font-weight: 300; 
+h1,h2,h3 { font-weight: 300;
 }
-p { line-height: 28px; 
+p { line-height: 28px;
 }
 hr {
   border-color: #f2f2f2;
@@ -33,7 +33,7 @@ hr {
 }
 
 /* START NAVIGATION */
-.sticky-navigation { opacity: 0; 
+.sticky-navigation { opacity: 0;
 }
 .navbar-default {
   background: #fff;
@@ -96,21 +96,21 @@ hr {
   -webkit-align-items: center;
   -ms-flex-align: center;
   align-items: center;
-  text-align: center;  
+  text-align: center;
   height: 100vh;
 }
-.tm-menu-title { 
+.tm-menu-title {
   padding-top: 10px;
   width: 150px;
   height: auto;
 }
-.tm-home-title { 
+.tm-home-title {
   padding-top: 50px;
   width: 375px;
   height: auto;
 }
 .tm-home-subtitle {
-  font-size: 26px; 
+  font-size: 26px;
   color: #eb5424;
   font-weight: bold;
   padding-bottom: 40px;
@@ -181,7 +181,7 @@ hr {
 .list-wrapper-cont2 {
   line-height: 80px;
   padding-left: 20px;
-  text-align: left;  
+  text-align: left;
 }
 .list-wrapper-cont1 .fa {
   color: #888888;
@@ -192,31 +192,31 @@ hr {
   font-size: 14px;
   position: absolute;
   top: 15px;
-  right: 5px;  
+  right: 5px;
   padding: 1rem;
   background: #eb5424;
   color: #ffffff;
   border: none;
   border-radius: 2px;
   margin-top: 2px;
-  padding: 10px 20px; 
+  padding: 10px 20px;
   -webkit-transition: all 0.6s ease-in;
-          transition: all 0.6s ease-in;	
+          transition: all 0.6s ease-in;
 }
 .card-prices-tag2 {
   font-size: 14px;
   position: absolute;
   top: 15px;
-  right: 5px;  
+  right: 5px;
   padding: 1rem;
   background: #888888;
   color: #ffffff;
   border: none;
   border-radius: 2px;
   margin-top: 2px;
-  padding: 10px 20px; 
+  padding: 10px 20px;
   -webkit-transition: all 0.6s ease-in;
-          transition: all 0.6s ease-in;	
+          transition: all 0.6s ease-in;
 }
 .work-title {
   color: #303030;
@@ -280,7 +280,7 @@ hr {
   left: 0;
   bottom: 0;
   width: 100%;
-  height: 100%;  
+  height: 100%;
   padding: 0 40px;
   text-align: center;
   position: absolute;
@@ -292,7 +292,7 @@ hr {
   padding: 2px;
 }
 .portfolio-thumb:hover .portfolio-overlay {
-  opacity: 0.8;  
+  opacity: 0.8;
   -webkit-transform: scale(1.0);
   -ms-transform: scale(1.0);
   transform: scale(1.0);
@@ -435,6 +435,15 @@ hr {
   text-transform: uppercase;
   padding-bottom: 10px;
 }
+.icon-red-big {
+  color: #eb5424;
+  padding-right: 7px;
+}
+.icon-red-bigger {
+  color: #eb5424;
+  font-size: 17px;
+  padding-right: 7px;
+}
 .mentenanta-title2nd {
   color: #303030;
   text-transform: uppercase;
@@ -473,7 +482,7 @@ hr {
   justify-content: space-between;
   margin-left: auto;
   margin-right: auto;
-  flex-wrap: wrap; 
+  flex-wrap: wrap;
 }
 .icons-contact-container {
   width: 48%;
@@ -483,24 +492,24 @@ hr {
   gap: 1rem;
   margin-top: 2rem;
   display: flex;
-  flex-direction: column;  
+  flex-direction: column;
 }
 .box-contact-more {
   display: flex;
   gap: 1rem;
-  flex-wrap: wrap; 
+  flex-wrap: wrap;
   flex-wrap: nowrap;
-  align-items: flex-start; 
+  align-items: flex-start;
 }
 .icon-contact-more {
 	margin-top: 16px;
 	width: 40px;
-	height: 40px;	
+	height: 40px;
 }
 .text-contact-more-title {
   font-size: 20px;
   font-weight: 700;
-  line-height: 2px;  
+  line-height: 2px;
   padding-top: 27px;
 }
 .form-group-container {
@@ -514,7 +523,7 @@ hr {
 .form-group {
   width: 100%;
   display: flex;
-  flex-direction: column; 
+  flex-direction: column;
 }
 .form-label {
   margin-bottom: 0.5rem;
@@ -550,7 +559,7 @@ hr {
   border: none;
   border-radius: 2px;
   margin-top: 2px;
-  padding: 10px 20px; 
+  padding: 10px 20px;
   -webkit-transition: all 0.6s ease-in;
           transition: all 0.6s ease-in;
 }
