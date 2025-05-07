@@ -246,6 +246,7 @@ hr {
   margin: 0;
 }
 .tm-portfolio-title {
+  justify-items: center;
   text-align: center;
   text-transform: uppercase;
 }
@@ -348,10 +349,9 @@ hr {
 .iso-box {
   position: relative;
   min-height: 50px;
-  max-height: 225px;
   float: left;
   overflow: hidden;
-  margin-bottom: 20px;  
+  margin-bottom: 20px;
 }
 .iso-box > a {
   display: block;
