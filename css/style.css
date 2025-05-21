@@ -573,6 +573,46 @@ hr {
 }
 /* END CONTACT */
 
+/* START ANOUNCE */
+.modal {
+  display: none; 
+  position: fixed;
+  z-index: 1000;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.6);
+}
+
+.modal-content {
+  font-size: 12px;
+  background-color: #fff;
+  margin: 15% auto;
+  padding: 20px;
+  border-radius: 10px;
+  width: 80%;
+  max-width: 500px;
+  text-align: center;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+
+.close-btn {
+  background-color: #eb5424;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+  border-radius: 5px;
+  margin-top: 15px;
+}
+
+.close-btn:hover {
+  background-color: #d32f2f;
+}
+/* END ANOUNCE */
+
 @media screen and (max-device-width: 1024px){
   .templatemo-home {
     background-attachment: scroll;
