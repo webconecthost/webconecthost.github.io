@@ -411,27 +411,25 @@
 	<!-- END CONTACT -->
 
 	<!-- START ANOUNCE -->
-	<div id="popupModal" class="modal">
-		<div class="modal-content">
-			<h2>Servicii noi!</h2> 
-			<p>Ai nevoie de asistență în instalarea sistemului de operare, a programelor esențiale sau configurarea corectă a calculatorului tău?<br>Ofer intervenții rapide, soluții eficiente și consultanță de calitate!</p>
-			<p>&nbsp;</p>
-			<h3>💻 Servicii oferite:</h3>
-			<p style="text-align: left; margin-left: 30px; margin-right: 20px;"><i class="fa fa-check-square icon icon-red-big"></i> Instalare și configurare Windows - activare cu licență: <strong>100 RON</strong></p>
-			<p style="text-align: left; margin-left: 30px; margin-right: 20px;"><i class="fa fa-check-square icon icon-red-big"></i> Instalare suita Microsoft Office - licență permanentă: <strong>75 RON</strong></p>
-			<p style="text-align: left; margin-left: 30px; margin-right: 20px;"><i class="fa fa-check-square icon icon-red-big"></i> Instalare drivere, browser, programe sau aplicatii: <strong>aprox. 50 RON</strong></p>
-			<p style="text-align: left; margin-left: 30px; margin-right: 20px;"><i class="fa fa-check-square icon icon-red-big"></i> Consultanță pentru alegerea componentelor hardware: <strong>10 RON</strong></p>
-			<p>&nbsp;</p>
-			<p style="margin: 4px 0; font-size: 11px;">
-				<i class='fa fa-map-marker' style='font-size:14px;color:#eb5424'></i>&nbsp; &nbsp;Disponibil în Sibiu și împrejurimi<br>
-				<i class='fa fa-archive' style='font-size:12px;color:#eb5424'></i>&nbsp; Preluare: Calea Cisnădiei, Euroil<br>
-				<i class='fa fa-car' style='font-size:12px;color:#eb5424'></i>&nbsp; Deplasare la domiciliu: <strong>+30 RON</strong>
-			</p>
+    <div id="popup-overlay" class="popup-overlay">
+        <div class="popup-content">
+            <span class="close-button" id="close-popup">&times;</span>
+            <div class="popup-body">
+                <div class="popup-image">
+                    <img src="https://via.placeholder.com/300x200" alt="Woman with toothache">
+                    </div>
+                <div class="popup-text">
+                    <h2>Sensibilitate dentară?</h2>
+                    <h2>Gingii inflamate?</h2>
+                    <h2>Sângerări gingivale?</h2>
+                    <p>Cu pachetul ParoTreat, poți uita de durere și disconfort!</p>
+                    <button class="contact-button">Contactează-ne</button>
+                </div>
+            </div>
+        </div>
+    </div>
 
-			<button class="close-btn" onclick="closeModal()">Close</button>
-
-		  </div>		
-	  </div>
+    <script src="js/script.js"></script> 
 	<!-- END ANOUNCE -->
 
     <script src="js/jquery.js" defer></script>
@@ -441,21 +439,7 @@
     <script src="js/isotope.js" defer></script>
     <script src="js/imagesloaded.min.js" defer></script>
     <script src="js/custom.js" defer></script>
-
-	<script>
-		// Show modal after 5 seconds
-		window.onload = function() {
-		  setTimeout(function() {
-			document.getElementById('popupModal').style.display = 'block';
-		  }, 2000); // 3000 milliseconds = 3 seconds
-		};
-	  
-		// Close modal function
-		function closeModal() {
-		  document.getElementById('popupModal').style.display = 'none';
-		}
-	  </script>
-
+	<script src="js/script.js" defer></script> 
 </body>
 
 </html>
