@@ -118,20 +118,22 @@ hr {
   letter-spacing: 2px;
 }
 .tm-view-more-btn {
-  background: #eb5424;
-  color: #ffffff;
+  background-color: #eb5424; /* Green button */
+  color: white;
+  padding: 12px 25px;
   border: none;
-  border-radius: 2px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
   font-size: 20px;
   font-weight: 700;
   margin-top: 30px;
   padding: 15px 50px;
-  -webkit-transition: all 0.6s ease-in;
-          transition: all 0.6s ease-in;
 }
 .tm-view-more-btn:hover {
-  background: #ffffff;
-  color: #eb5424;
+  background-color: #d84d23;
+  color: white;
+  transform: scale(1.05);
 }
 /* END HOME */
 
@@ -556,14 +558,17 @@ hr {
   resize: none;
 }
 .form-submit {
-  background: #eb5424;
-  color: #ffffff;
+  background-color: #eb5424; /* Green button */
+  color: white;
+  padding: 12px 25px;
   border: none;
-  border-radius: 2px;
-  margin-top: 2px;
-  padding: 10px 20px;
-  -webkit-transition: all 0.6s ease-in;
-          transition: all 0.6s ease-in;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+.form-submit:hover {
+  background-color: #d84d23;
+  transform: scale(1.05);
 }
 .form-submit-button-container {
   display: flex;
@@ -581,36 +586,31 @@ hr {
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba(0, 0, 0, 0.7); /* Dark semi-transparent background */
+  background-color: rgba(0, 0, 0, 0.7);
   display: flex;
   justify-content: center;
   align-items: center;
-  z-index: 1000; /* Ensures it's on top of other content */
-  opacity: 0; /* Initially hidden */
-  visibility: hidden; /* Initially hidden */
+  z-index: 1000;
+  opacity: 0;
+  visibility: hidden;
   transition: opacity 0.3s ease, visibility 0.3s ease;
 }
-
 .popup-overlay.active {
   opacity: 1;
   visibility: visible;
 }
-
-/* Pop-up Content Box */
 .popup-content {
   background-color: #fff;
   border-radius: 8px;
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
-  width: 90%; /* Responsive width */
-  max-width: 800px; /* Max width for larger screens */
+  width: 90%;
+  max-width: 800px;
   position: relative;
   padding: 20px;
   display: flex;
   flex-direction: column;
   align-items: center;
 }
-
-/* Close Button */
 .close-button {
   position: absolute;
   top: 10px;
@@ -619,53 +619,43 @@ hr {
   cursor: pointer;
   color: #333;
 }
-
 .close-button:hover {
   color: #000;
 }
-
-/* Pop-up Body (Image and Text) */
 .popup-body {
   display: flex;
-  flex-direction: column; /* Stack vertically on small screens */
+  flex-direction: column;
   width: 100%;
   align-items: center;
   text-align: center;
 }
-
 .popup-image {
   flex: 1;
-  min-width: 50%; /* Image takes half width on larger screens */
-  margin-bottom: 20px; /* Space between image and text on small screens */
+  min-width: 50%;
+  margin-bottom: 20px;
 }
-
 .popup-image img {
   max-width: 100%;
   height: auto;
-  border-radius: 8px; /* Slightly rounded corners for the image */
+  border-radius: 8px;
 }
-
 .popup-text {
   flex: 1;
   padding: 0 20px;
 }
-
 .popup-text h2 {
   color: #333;
   font-size: 1.5em;
   margin-bottom: 10px;
 }
-
 .popup-text p {
   color: #666;
   font-size: 1em;
   line-height: 1.5;
   margin-bottom: 20px;
 }
-
-/* Contact Button */
 .contact-button {
-  background-color: #28a745; /* Green button */
+  background-color: #eb5424; 
   color: white;
   padding: 12px 25px;
   border: none;
@@ -674,25 +664,28 @@ hr {
   font-size: 1.1em;
   transition: background-color 0.3s ease;
 }
-
 .contact-button:hover {
-  background-color: #218838; /* Darker green on hover */
+  background-color: #d84d23;
+  transform: scale(1.05);
 }
-
-/* Media Queries for Responsiveness */
-@media (min-width: 768px) {
-  .popup-body {
-      flex-direction: row; /* Side-by-side on larger screens */
-      text-align: left;
-  }
-
-  .popup-image {
-      margin-bottom: 0;
-      margin-right: 20px; /* Space between image and text on larger screens */
-  }
+.whatsapp-button {
+  position: fixed;
+  bottom: 40px;
+  right: 40px;
+  z-index: 1000;
+  display: block;
+}
+.whatsapp-button img {
+  width: 60px;
+  height: auto;
+}
+.whatsapp-button:hover {
+  transform: scale(1.05);
+  transition: transform 0.2s ease-in-out;
 }
 /* END ANOUNCE */
 
+/* START MEDIA 1024 */
 @media screen and (max-device-width: 1024px){
   .templatemo-home {
     background-attachment: scroll;
@@ -743,6 +736,17 @@ hr {
     width: 100%;
     max-width: 100%;
     justify-items: center;
+  }
+}
+@media (min-width: 768px) {
+  .popup-body {
+      flex-direction: row; /* Side-by-side on larger screens */
+      text-align: left;
+  }
+
+  .popup-image {
+      margin-bottom: 0;
+      margin-right: 20px; /* Space between image and text on larger screens */
   }
 }
 /* END MEDIA 767 */

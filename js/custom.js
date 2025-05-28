@@ -77,11 +77,11 @@ jQuery(document).ready(function($){
         if (top > 40) $('.sticky-navigation').stop().animate({
             "opacity": '1',
             "top": '0'
-        });
+        }, 200);
         else $('.sticky-navigation').stop().animate({
             "opacity": '0',
             "top": '-75'
-        });
+        }, 200);
     }
 
 
