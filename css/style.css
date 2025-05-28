@@ -84,21 +84,36 @@ hr {
 
 /* START HOME */
 .templatemo-home {
-  background: url('../images/home-bg.jpg');
-  background-size: cover;
-  background-attachment: fixed;
-  background-position: center center;
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
   color: #5f5f5f;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-  -webkit-align-items: center;
-  -ms-flex-align: center;
   align-items: center;
   text-align: center;
   height: 100vh;
+}
+.templatemo-home::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: url('../images/home-bg.jpg');
+  background-size: cover;
+  background-position: center center;
+  transform: scale(1);
+  z-index: -1;
+  animation: zoom-background 4s ease-in-out infinite alternate;
+}
+@keyframes zoom-background {
+  from {
+      transform: scale(1);
+  }
+  to {
+      transform: scale(1.1);
+  }
 }
 .tm-menu-title {
   padding-top: 10px;
@@ -118,7 +133,7 @@ hr {
   letter-spacing: 2px;
 }
 .tm-view-more-btn {
-  background-color: #eb5424; /* Green button */
+  background-color: #eb5424;
   color: white;
   padding: 12px 25px;
   border: none;
@@ -604,7 +619,7 @@ hr {
   border-radius: 8px;
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
   width: 90%;
-  max-width: 800px;
+  max-width: 625px;
   position: relative;
   padding: 20px;
   display: flex;
@@ -638,26 +653,24 @@ hr {
   max-width: 100%;
   height: auto;
   border-radius: 8px;
+  padding-top: 15px;
 }
 .popup-text {
   flex: 1;
-  padding: 0 20px;
-}
-.popup-text h2 {
-  color: #333;
-  font-size: 1.5em;
-  margin-bottom: 10px;
+  padding-top: 35px;
 }
 .popup-text p {
   color: #666;
-  font-size: 1em;
-  line-height: 1.5;
+  font-size: 12px;
+  line-height: 1.3;
   margin-bottom: 20px;
 }
 .contact-button {
   background-color: #eb5424; 
   color: white;
   padding: 12px 25px;
+  margin-top: 30px;
+  margin-bottom: 5px;
   border: none;
   border-radius: 5px;
   cursor: pointer;
@@ -668,6 +681,17 @@ hr {
   background-color: #d84d23;
   transform: scale(1.05);
 }
+/* Target the <a> tag directly within your contact button */
+.contact-button a {
+  color: white; /* This will override Bootstrap's default link color */
+  text-decoration: none; /* Optional: to remove underline if Bootstrap adds one */
+}
+
+/* If you want the hover effect on the text itself, not just the button background */
+.contact-button a:hover {
+  color: white; /* Keep text white on hover too */
+  text-decoration: none; /* Keep no underline on hover */
+}
 .whatsapp-button {
   position: fixed;
   bottom: 40px;
@@ -676,10 +700,26 @@ hr {
   display: block;
 }
 .whatsapp-button img {
-  width: 60px;
+  width: 50px;
   height: auto;
 }
 .whatsapp-button:hover {
+  transform: scale(1.05);
+  transition: transform 0.2s ease-in-out;
+}
+
+.google-button {
+  position: fixed;
+  bottom: 100px;
+  right: 35px;
+  z-index: 1000;
+  display: block;
+}
+.google-button img {
+  width: 55px;
+  height: auto;
+}
+.google-button:hover {
   transform: scale(1.05);
   transition: transform 0.2s ease-in-out;
 }
@@ -719,6 +759,8 @@ hr {
   .title { font-size: 40px; padding-bottom: 10px;}
   .title2nd { font-size: 40px; padding-top: 70px; padding-bottom: 10px;}
   .resume-title1st { font-size: 50px; }
+  .google-button { bottom: 80px; right: 15px; }
+  .whatsapp-button { bottom: 20px; right: 20px; }
   .form-group-container, .icons-contact-container {
     width: 100%;
     max-width: 100%;
@@ -760,6 +802,8 @@ hr {
   .title { font-size: 30px; padding-bottom: 10px; }
   .title2nd { font-size: 30px; padding-top: 70px; padding-bottom: 10px; }
   .resume-title1st { font-size: 45px; }
+  .google-button { bottom: 80px; right: 15px; }
+  .whatsapp-button { bottom: 20px; right: 20px; }  
   .form-group-container, .icons-contact-container {
     width: 100%;
     max-width: 100%;
@@ -791,6 +835,8 @@ hr {
   .title2nd { font-size: 30px; padding-top: 70px; padding-bottom: 10px;}
   .box-contact-more {flex-direction: column; }
   .resume-title1st { font-size: 40px; }
+  .google-button { bottom: 80px; right: 15px; }
+  .whatsapp-button { bottom: 20px; right: 20px; } 
   .form-group-container, .icons-contact-container {
     width: 100%;
     max-width: 100%;
