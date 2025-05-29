@@ -822,6 +822,12 @@ body.no-scroll {
     max-width: 100%;
     justify-items: center;
   }
+  .res-column-wie {
+    text-align: center;
+  }
+  .popup-subtitle p {
+    line-height: 20px;
+  }  
 }
 /* END MEDIA 767 */
 
@@ -853,6 +859,9 @@ body.no-scroll {
     width: 100%;
     max-width: 100%;
     justify-items: center;
+  }
+  .res-column-wie {
+    text-align: center;
   }
   .contact-button, .popup-subtitle, .google-button {
     display: none;
@@ -891,6 +900,9 @@ body.no-scroll {
     width: 100%;
     max-width: 100%;
     justify-items: center;
+  }
+  .res-column-wie {
+    text-align: center;
   }
   .contact-button, .popup-subtitle, .google-button {
     display: none;
