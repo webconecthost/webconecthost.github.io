@@ -4,9 +4,6 @@ document.addEventListener('DOMContentLoaded', (event) => {
     const closeButton = document.getElementById('close-popup');
     const body = document.body;
 
-    const contactButton = document.querySelector('.popup-content .contact-button');
-    const contactButtonLink = document.querySelector('.popup-content .contact-button a');
-
     // Function to show the pop-up
     function showPopup() {
         popupOverlay.classList.add('active');
@@ -48,24 +45,4 @@ document.addEventListener('DOMContentLoaded', (event) => {
             hidePopup();
         }
     });
-
-    // --- Modified logic for the contact button within the pop-up ---
-    if (contactButton && contactButtonLink) {
-        contactButton.addEventListener('click', function(event) {
-            event.preventDefault();
-
-            hidePopup();
-
-            const targetId = contactButtonLink.getAttribute('href');
-            const targetSection = document.querySelector(targetId);
-
-            if (targetSection) {
-                setTimeout(() => {
-                    targetSection.scrollIntoView({
-                        behavior: 'smooth'
-                    });
-                }, 100);
-            }
-        });
-    }
 });
