@@ -610,22 +610,36 @@ hr {
   visibility: hidden;
   transition: opacity 0.3s ease, visibility 0.3s ease;
 }
+
+/* Prevent body scroll when popup is active */
+body.no-scroll {
+  overflow: hidden; /* This stops the main body from scrolling */
+}
+
 .popup-overlay.active {
   opacity: 1;
   visibility: visible;
 }
+
 .popup-content {
   background-color: #fff;
   border-radius: 8px;
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
-  width: 90%;
+  width: 90%; /* Adjusted for better small screen fit, still allows max-width */
   max-width: 625px;
   position: relative;
   padding: 20px;
   display: flex;
   flex-direction: column;
   align-items: center;
+
+  /* --- Key changes for scrolling and mobile responsiveness --- */
+  max-height: 90vh; /* Limits the height to 90% of viewport height */
+  overflow-y: auto; /* Enables vertical scrolling within the popup if content overflows */
+  -webkit-overflow-scrolling: touch; /* Improves scrolling on iOS devices */
+  /* --- End key changes --- */
 }
+
 .close-button {
   position: absolute;
   top: 10px;
@@ -637,61 +651,105 @@ hr {
 .close-button:hover {
   color: #000;
 }
-.popup-body {
-  display: flex;
-  flex-direction: column;
-  width: 100%;
-  align-items: center;
+
+/* Changed direct h1 styling to specific popup h1 for better control */
+.popup-content h1 {
+  font-size: 1.8em; /* Slightly smaller for mobile */
+  margin-bottom: 10px;
   text-align: center;
 }
+
+/* For the first paragraph, you might want to remove inline styles if possible */
+.popup-content p {
+  line-height: 1.3; /* Adjusted line-height */
+  margin-top: 10px; /* Reduced margin-top for tighter spacing */
+  font-size: 0.95em; /* Slightly smaller for general paragraphs in popup */
+  text-align: center; /* Center align all text for consistency on mobile */
+}
+
+/* Specific styling for the small info paragraph */
+.popup-content p:nth-of-type(2) { /* This targets the second <p> tag within popup-content */
+  font-size: 11px; /* Keep this small as you intended */
+  margin-bottom: 15px; /* Add some space below it */
+  line-height: 1.5; /* Ensure readability */
+}
+
+
+.popup-body {
+  display: flex;
+  flex-direction: column; /* Default to column for small screens */
+  width: 100%;
+  align-items: center;
+  text-align: center; /* Keep text centered for column layout */
+}
 .popup-image {
-  flex: 1;
-  min-width: 50%;
-  margin-bottom: 20px;
+  flex: none; /* Do not grow or shrink, maintain size based on content */
+  width: 100%; /* Image takes full width of its container on small screens */
+  max-width: 300px; /* Limit image width to prevent it from being too big */
+  margin-bottom: 15px; /* Slightly reduced margin */
 }
 .popup-image img {
   max-width: 100%;
   height: auto;
   border-radius: 8px;
-  padding-top: 15px;
+  padding-top: 0; /* Remove padding-top from image itself if it's already on parent */
 }
 .popup-text {
   flex: 1;
-  padding-top: 35px;
+  padding: 0 10px; /* Reduced horizontal padding for smaller screens */
+  padding-top: 0; /* Remove padding-top here as well */
 }
 .popup-text p {
   color: #666;
-  font-size: 12px;
-  line-height: 1.3;
-  margin-bottom: 20px;
+  font-size: 13px; /* Slightly adjusted font size for readability */
+  line-height: 1.5; /* Better line height for lists */
+  margin-bottom: 10px; /* Reduced margin between list items */
+  text-align: left; /* Align service list text to left within its container */
 }
+.popup-text p:last-child {
+  margin-bottom: 0; /* No margin after the last paragraph in the list */
+}
+
+.icon-red-big {
+  color: #eb5424;
+  font-size: 14px; /* Ensure icons are visible but not too big */
+  margin-right: 8px; /* Space between icon and text */
+}
+
 .contact-button {
-  background-color: #eb5424; 
+  background-color: #eb5424;
   color: white;
   padding: 12px 25px;
-  margin-top: 30px;
+  margin-top: 25px; /* Slightly reduced margin-top */
   margin-bottom: 5px;
   border: none;
   border-radius: 5px;
   cursor: pointer;
-  font-size: 1.1em;
-  transition: background-color 0.3s ease;
+  font-size: 1em; /* Slightly smaller font size for button */
+  transition: background-color 0.3s ease, transform 0.3s ease; /* Added transform to transition */
+  text-decoration: none; /* Ensure no underline on the button itself */
 }
 .contact-button:hover {
   background-color: #d84d23;
   transform: scale(1.05);
 }
+
 /* Target the <a> tag directly within your contact button */
 .contact-button a {
-  color: white; /* This will override Bootstrap's default link color */
-  text-decoration: none; /* Optional: to remove underline if Bootstrap adds one */
+  color: white;
+  text-decoration: none; /* Ensure no underline on the link */
+  display: block; /* Make the link fill the button area */
+  padding: 0; /* Remove any default padding that might affect sizing */
 }
 
 /* If you want the hover effect on the text itself, not just the button background */
 .contact-button a:hover {
-  color: white; /* Keep text white on hover too */
-  text-decoration: none; /* Keep no underline on hover */
+  color: white;
+  text-decoration: none;
 }
+/* END ANOUNCE */
+
+/* START BUTTONS */
 .whatsapp-button {
   position: fixed;
   bottom: 40px;
@@ -704,7 +762,7 @@ hr {
   height: auto;
 }
 .whatsapp-button:hover {
-  transform: scale(1.05);
+  transform: scale(1.1);
   transition: transform 0.2s ease-in-out;
 }
 
@@ -716,14 +774,14 @@ hr {
   display: block;
 }
 .google-button img {
-  width: 55px;
+  width: 54px;
   height: auto;
 }
 .google-button:hover {
-  transform: scale(1.05);
+  transform: scale(1.1);
   transition: transform 0.2s ease-in-out;
 }
-/* END ANOUNCE */
+/* END BUTTONS */
 
 /* START MEDIA 1024 */
 @media screen and (max-device-width: 1024px){
@@ -759,6 +817,8 @@ hr {
   .title { font-size: 40px; padding-bottom: 10px;}
   .title2nd { font-size: 40px; padding-top: 70px; padding-bottom: 10px;}
   .resume-title1st { font-size: 50px; }
+  .google-button img { width: 54px; height: auto; }
+  .whatsapp-button img { width: 50px; height: auto; }    
   .google-button { bottom: 80px; right: 15px; }
   .whatsapp-button { bottom: 20px; right: 20px; }
   .form-group-container, .icons-contact-container {
@@ -802,8 +862,10 @@ hr {
   .title { font-size: 30px; padding-bottom: 10px; }
   .title2nd { font-size: 30px; padding-top: 70px; padding-bottom: 10px; }
   .resume-title1st { font-size: 45px; }
-  .google-button { bottom: 80px; right: 15px; }
-  .whatsapp-button { bottom: 20px; right: 20px; }  
+  .google-button img { width: 43px; height: auto; }
+  .whatsapp-button img { width: 39.5px; height: auto; }    
+  .google-button { bottom: 75px; right: 16px; }
+  .whatsapp-button { bottom: 20px; right: 20px; }
   .form-group-container, .icons-contact-container {
     width: 100%;
     max-width: 100%;
@@ -835,8 +897,10 @@ hr {
   .title2nd { font-size: 30px; padding-top: 70px; padding-bottom: 10px;}
   .box-contact-more {flex-direction: column; }
   .resume-title1st { font-size: 40px; }
+  .google-button img { width: 44px; height: auto; }
+  .whatsapp-button img { width: 40px; height: auto; }    
   .google-button { bottom: 80px; right: 15px; }
-  .whatsapp-button { bottom: 20px; right: 20px; } 
+  .whatsapp-button { bottom: 20px; right: 20px; }
   .form-group-container, .icons-contact-container {
     width: 100%;
     max-width: 100%;

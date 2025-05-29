@@ -1,22 +1,36 @@
 document.addEventListener('DOMContentLoaded', (event) => {
     const popupOverlay = document.getElementById('popup-overlay');
+    const popupContent = document.querySelector('.popup-content'); // Get a reference to the popup content itself
     const closeButton = document.getElementById('close-popup');
-    // Change this line: target the <button> element instead of the <a>
-    const contactButton = document.querySelector('.popup-content .contact-button'); 
-    const contactButtonLink = document.querySelector('.popup-content .contact-button a'); // Still need reference to the <a> for its href
+    const body = document.body;
+
+    const contactButton = document.querySelector('.popup-content .contact-button');
+    const contactButtonLink = document.querySelector('.popup-content .contact-button a');
 
     // Function to show the pop-up
     function showPopup() {
         popupOverlay.classList.add('active');
+        body.classList.add('no-scroll'); // Add no-scroll class to body
+
+        // --- NEW: Focus the popup content to enable immediate scrolling ---
+        // We'll give it a tabindex if it doesn't have one, to make it focusable
+        if (!popupContent.hasAttribute('tabindex')) {
+            popupContent.setAttribute('tabindex', '-1'); // -1 makes it focusable programmatically, but not via Tab key
+        }
+        popupContent.focus(); // Set focus to the popup content
+        // --- END NEW ---
     }
 
     // Function to hide the pop-up
     function hidePopup() {
         popupOverlay.classList.remove('active');
+        body.classList.remove('no-scroll');
+        // Restore focus to the body or a relevant element on the main page after hiding
+        body.focus();
     }
 
     // Show the pop-up after 2 seconds
-    setTimeout(showPopup, 2000); // 2000 milliseconds = 2 seconds
+    setTimeout(showPopup, 2000);
 
     // Close the pop-up when the close button is clicked
     closeButton.addEventListener('click', hidePopup);
@@ -36,26 +50,21 @@ document.addEventListener('DOMContentLoaded', (event) => {
     });
 
     // --- Modified logic for the contact button within the pop-up ---
-    if (contactButton && contactButtonLink) { // Check if both elements exist
-        // Attach the event listener to the <button> itself
+    if (contactButton && contactButtonLink) {
         contactButton.addEventListener('click', function(event) {
-            event.preventDefault(); // Prevent default if button type="submit" or other default actions
+            event.preventDefault();
 
-            // 1. Hide the pop-up first
-            hidePopup(); // Use your existing hide function
+            hidePopup();
 
-            // 2. Get the target section's ID from the href of the <a> tag
-            const targetId = contactButtonLink.getAttribute('href'); // Get href from the <a>
+            const targetId = contactButtonLink.getAttribute('href');
             const targetSection = document.querySelector(targetId);
 
             if (targetSection) {
-                // 3. Smoothly scroll to the target section
-                // Using a short delay ensures the popup has finished hiding before the scroll
                 setTimeout(() => {
                     targetSection.scrollIntoView({
                         behavior: 'smooth'
                     });
-                }, 100); // A small delay (e.g., 100ms) can help
+                }, 100);
             }
         });
     }
