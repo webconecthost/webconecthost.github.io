@@ -834,9 +834,7 @@ body.no-scroll {
   .title { font-size: 30px; padding-bottom: 10px; }
   .title2nd { font-size: 30px; padding-top: 70px; padding-bottom: 10px; }
   .resume-title1st { font-size: 45px; }
-  .google-button img { width: 43px; height: auto; }
-  .whatsapp-button img { width: 39.5px; height: auto; }    
-  .google-button { bottom: 75px; right: 16px; }
+  .whatsapp-button img { width: 48px; height: auto; }    
   .whatsapp-button { bottom: 20px; right: 20px; }
   .form-group-container, .icons-contact-container {
     width: 100%;
@@ -874,9 +872,7 @@ body.no-scroll {
   .title2nd { font-size: 30px; padding-top: 70px; padding-bottom: 10px;}
   .box-contact-more {flex-direction: column; }
   .resume-title1st { font-size: 40px; }
-  .google-button img { width: 44px; height: auto; }
-  .whatsapp-button img { width: 40px; height: auto; }    
-  .google-button { bottom: 80px; right: 15px; }
+  .whatsapp-button img { width: 48px; height: auto; }    
   .whatsapp-button { bottom: 20px; right: 20px; }
   .form-group-container, .icons-contact-container {
     width: 100%;
