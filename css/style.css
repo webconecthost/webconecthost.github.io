@@ -484,6 +484,9 @@ hr {
   margin-right: auto;
   padding: 3rem 1rem;
 }
+.contact-intro {
+  margin-left: 27px;
+}
 .contact-intro > * + * {
   margin-top: 1rem;
 }
@@ -621,9 +624,9 @@ body.no-scroll {
   border-radius: 8px;
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
   width: 90%;
-  max-width: 625px;
+  max-width: 1000px;
   position: relative;
-  padding: 20px;
+  padding: 30px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -649,10 +652,9 @@ body.no-scroll {
   align-items: center;
   text-align: center;
   margin-top: 20px;
-  margin-bottom: 10px;
 }
 .popup-subtitle p {
-  line-height: 10px;
+  line-height: 15px;
 }
 .popup-body {
   display: flex;
@@ -660,31 +662,26 @@ body.no-scroll {
   width: 100%;
   align-items: center;
   text-align: center;
-  margin-top: 30px;
-  margin-bottom: 30px;
+  margin-top: 50px;
+  margin-bottom: 50px;
 }
 .popup-image {
   flex: none; 
   width: 100%; 
-  max-width: 300px;
-  margin-bottom: 15px; 
+  max-width: 450px;
 }
 .popup-image img {
   max-width: 100%;
   height: auto;
-  border-radius: 8px;
-  padding-top: 0;
 }
 .popup-text {
   flex: 1;
-  padding: 0 10px;
-  padding-top: 0; 
+  margin-left: 35px;
 }
 .popup-text p {
   color: #666;
   font-size: 13px;
-  line-height: 1.5;
-  margin-bottom: 10px; 
+  line-height: 45px;
   text-align: left;
 }
 .icon-red-big {
@@ -722,6 +719,38 @@ body.no-scroll {
 /* END ANOUNCE */
 
 /* START BUTTONS */
+.google-button {
+  position: fixed;
+  bottom: 170px;
+  right: 40px;
+  z-index: 1000;
+  display: block;
+}
+.google-button img {
+  width: 53px;
+  height: auto;
+}
+.google-button:hover {
+  transform: scale(1.2);
+  transition: transform 0.2s ease-in-out;
+}
+
+.facebook-button {
+  position: fixed;
+  bottom: 105px;
+  right: 40px;
+  z-index: 1000;
+  display: block;
+}
+.facebook-button img {
+  width: 53px;
+  height: auto;
+}
+.facebook-button:hover {
+  transform: scale(1.2);
+  transition: transform 0.2s ease-in-out;
+}
+
 .whatsapp-button {
   position: fixed;
   bottom: 40px;
@@ -730,29 +759,22 @@ body.no-scroll {
   display: block;
 }
 .whatsapp-button img {
-  width: 50px;
+  width: 53px;
   height: auto;
 }
 .whatsapp-button:hover {
-  transform: scale(1.1);
-  transition: transform 0.2s ease-in-out;
-}
-.google-button {
-  position: fixed;
-  bottom: 100px;
-  right: 35px;
-  z-index: 1000;
-  display: block;
-}
-.google-button img {
-  width: 54px;
-  height: auto;
-}
-.google-button:hover {
-  transform: scale(1.1);
+  transform: scale(1.2);
   transition: transform 0.2s ease-in-out;
 }
 /* END BUTTONS */
+
+/* START MEDIA 1224 */
+@media screen and (max-width:1225px){
+  .popup-image { max-width: 350px; }
+  .popup-text p { line-height: 30px; }
+  .popup-content { max-width: 900px; }
+}
+/* END MEDIA 1224 */
 
 /* START MEDIA 1024 */
 @media screen and (max-device-width: 1024px){
@@ -782,6 +804,9 @@ body.no-scroll {
   .work-title { font-size: 45px;}
   .title { font-size: 45px; }
   .title2nd { font-size: 45px; }
+  .popup-image { max-width: 350px; }
+  .popup-text p { line-height: 30px; }
+  .popup-content { max-width: 900px; }  
   .form-group-container, .icons-contact-container {
     width: 100%;
     max-width: 100%;
@@ -800,10 +825,15 @@ body.no-scroll {
   .title { font-size: 40px; padding-bottom: 10px;}
   .title2nd { font-size: 40px; padding-top: 70px; padding-bottom: 10px;}
   .resume-title1st { font-size: 50px; }
-  .google-button img { width: 54px; height: auto; }
-  .whatsapp-button img { width: 50px; height: auto; }    
-  .google-button { bottom: 80px; right: 15px; }
-  .whatsapp-button { bottom: 20px; right: 20px; }
+  .contact-intro { margin-left: 10px; }
+  .popup-image { max-width: 350px; margin-bottom: 30px; }
+  .popup-body { margin-bottom: 0px; }
+  .popup-text { margin-left: 20px; }  
+  .popup-text p { line-height: 30px; }
+  .popup-content { max-width: 900px; }  
+  .google-button, .facebook-button {
+    display: none;
+  }  
   .form-group-container, .icons-contact-container {
     width: 100%;
     max-width: 100%;
@@ -825,14 +855,11 @@ body.no-scroll {
   .res-column-wie {
     text-align: center;
   }
-  .popup-subtitle p {
-    line-height: 20px;
-  }  
 }
 /* END MEDIA 767 */
 
-/* START MEDIA 479 */
-@media screen and (max-width:479px){
+/* START MEDIA 550 */
+@media screen and (max-width:550px){
   .navbar-default .navbar-brand { padding-top: 2px; }
   .tm-home-title {   width: 220px; height: auto; padding-top: 100px; }
   .tm-home-subtitle { font-size: 20px; }
@@ -842,6 +869,12 @@ body.no-scroll {
   .resume-title1st { font-size: 45px; }
   .whatsapp-button img { width: 48px; height: auto; }    
   .whatsapp-button { bottom: 20px; right: 20px; }
+  .contact-intro { margin-left: 0px; }
+  .popup-image { max-width: 350px; margin-bottom: 30px; }
+  .popup-body { margin-top: 20px; margin-bottom: 0px; }
+  .popup-text { margin-left: 10px; }
+  .popup-text p { line-height: 20px; }
+  .popup-content { max-width: 900px; padding: 23px; } 
   .form-group-container, .icons-contact-container {
     width: 100%;
     max-width: 100%;
@@ -863,11 +896,9 @@ body.no-scroll {
   .res-column-wie {
     text-align: center;
   }
-  .contact-button, .popup-subtitle, .google-button {
+  .contact-button, .popup-subtitle, .google-button, .facebook-button {
     display: none;
   } 
-  .popup-image { margin-bottom: 30px; } 
-  .popup-body { margin-bottom: 10px; }   
 }
 /* END MEDIA 479 */
 
@@ -881,33 +912,5 @@ body.no-scroll {
   .title2nd { font-size: 30px; padding-top: 70px; padding-bottom: 10px;}
   .box-contact-more {flex-direction: column; }
   .resume-title1st { font-size: 40px; }
-  .whatsapp-button img { width: 48px; height: auto; }    
-  .whatsapp-button { bottom: 20px; right: 20px; }
-  .form-group-container, .icons-contact-container {
-    width: 100%;
-    max-width: 100%;
-    padding: 1px;
-  }
-  .res-column1 {
-    width: 100%;
-    max-width: 100%;
-    justify-items: center;
-    text-align: center;
-    padding-right: 0px;
-  }
-  .res-column2 {
-    padding-top: 30px;
-    width: 100%;
-    max-width: 100%;
-    justify-items: center;
-  }
-  .res-column-wie {
-    text-align: center;
-  }
-  .contact-button, .popup-subtitle, .google-button {
-    display: none;
-  } 
-  .popup-image { margin-bottom: 30px; } 
-  .popup-body { margin-bottom: 10px; }     
 }
 /* END MEDIA 300 */
