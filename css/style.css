@@ -626,13 +626,15 @@ body.no-scroll {
   width: 90%;
   max-width: 1000px;
   position: relative;
-  padding: 30px;
+  padding: 10px;
+  padding-bottom: 20px;
+  padding-left: 35px;
   display: flex;
   flex-direction: column;
   align-items: center;
-  max-height: 90vh;
-  overflow-y: auto; 
-  -webkit-overflow-scrolling: touch; 
+
+  overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
 }
 .close-button {
   position: absolute;
@@ -647,7 +649,7 @@ body.no-scroll {
 }
 .popup-subtitle {
   display: flex;
-  flex-direction: column; 
+  flex-direction: column;
   width: 100%;
   align-items: center;
   text-align: center;
@@ -658,7 +660,7 @@ body.no-scroll {
 }
 .popup-body {
   display: flex;
-  flex-direction: column; 
+  flex-direction: column;
   width: 100%;
   align-items: center;
   text-align: center;
@@ -666,8 +668,8 @@ body.no-scroll {
   margin-bottom: 50px;
 }
 .popup-image {
-  flex: none; 
-  width: 100%; 
+  flex: none;
+  width: 100%;
   max-width: 450px;
 }
 .popup-image img {
@@ -687,20 +689,20 @@ body.no-scroll {
 .icon-red-big {
   color: #eb5424;
   font-size: 14px;
-  margin-right: 8px; 
+  margin-right: 8px;
 }
 .contact-button {
   background-color: #eb5424;
   color: white;
   padding: 12px 25px;
-  margin-top: 25px; 
+  margin-top: 25px;
   margin-bottom: 5px;
   border: none;
   border-radius: 5px;
   cursor: pointer;
-  font-size: 1em; 
-  transition: background-color 0.3s ease, transform 0.3s ease; 
-  text-decoration: none; 
+  font-size: 1em;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+  text-decoration: none;
 }
 .contact-button:hover {
   background-color: #d84d23;
@@ -772,7 +774,11 @@ body.no-scroll {
 @media screen and (max-width:1225px){
   .popup-image { max-width: 350px; }
   .popup-text p { line-height: 30px; }
-  .popup-content { max-width: 900px; }
+  .popup-content {  max-width: 900px;
+                    position: relative;
+                    padding: 10px;
+                    padding-bottom: 20px;
+                    padding-left: 35px; }
 }
 /* END MEDIA 1224 */
 
@@ -806,7 +812,7 @@ body.no-scroll {
   .title2nd { font-size: 45px; }
   .popup-image { max-width: 350px; }
   .popup-text p { line-height: 30px; }
-  .popup-content { max-width: 900px; }  
+  .popup-content { max-width: 900px; padding-right: 35px;}
   .form-group-container, .icons-contact-container {
     width: 100%;
     max-width: 100%;
@@ -828,12 +834,12 @@ body.no-scroll {
   .contact-intro { margin-left: 10px; }
   .popup-image { max-width: 350px; margin-bottom: 30px; }
   .popup-body { margin-bottom: 0px; }
-  .popup-text { margin-left: 20px; }  
+  .popup-text { margin-left: 20px; }
   .popup-text p { line-height: 30px; }
-  .popup-content { max-width: 900px; }  
+  .popup-content { max-width: 900px; }
   .google-button, .facebook-button {
     display: none;
-  }  
+  }
   .form-group-container, .icons-contact-container {
     width: 100%;
     max-width: 100%;
@@ -867,14 +873,14 @@ body.no-scroll {
   .title { font-size: 30px; padding-bottom: 10px; }
   .title2nd { font-size: 30px; padding-top: 70px; padding-bottom: 10px; }
   .resume-title1st { font-size: 45px; }
-  .whatsapp-button img { width: 48px; height: auto; }    
+  .whatsapp-button img { width: 48px; height: auto; }
   .whatsapp-button { bottom: 20px; right: 20px; }
   .contact-intro { margin-left: 0px; }
   .popup-image { max-width: 350px; margin-bottom: 30px; }
   .popup-body { margin-top: 20px; margin-bottom: 0px; }
   .popup-text { margin-left: 10px; }
   .popup-text p { line-height: 20px; }
-  .popup-content { max-width: 900px; padding: 23px; } 
+  .popup-content { max-width: 900px; padding: 23px; }
   .form-group-container, .icons-contact-container {
     width: 100%;
     max-width: 100%;
@@ -898,7 +904,7 @@ body.no-scroll {
   }
   .contact-button, .popup-subtitle, .google-button, .facebook-button {
     display: none;
-  } 
+  }
 }
 /* END MEDIA 479 */
 

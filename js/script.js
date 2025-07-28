@@ -27,7 +27,7 @@ document.addEventListener('DOMContentLoaded', (event) => {
     }
 
     // Show the pop-up after 2 seconds
-    setTimeout(showPopup, 2000);
+    setTimeout(showPopup, 1);
 
     // Close the pop-up when the close button is clicked
     closeButton.addEventListener('click', hidePopup);
