@@ -632,7 +632,6 @@ body.no-scroll {
   display: flex;
   flex-direction: column;
   align-items: center;
-
   overflow-y: auto;
   -webkit-overflow-scrolling: touch;
 }
