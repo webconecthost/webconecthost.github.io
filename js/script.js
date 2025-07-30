@@ -9,7 +9,7 @@ document.addEventListener('DOMContentLoaded', (event) => {
         const zoomLevel = window.devicePixelRatio || 1;
 
         if (zoomLevel > 1.1) {
-            popupContent.style.transform = 'scale(0.7)';
+            popupContent.style.transform = 'scale(0.8)';
             popupContent.style.transformOrigin = 'center center';
         } else {
             popupContent.style.transform = 'scale(1)';
