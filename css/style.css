@@ -273,9 +273,17 @@ hr {
   text-transform: uppercase;
 }
 .portfolio-thumb {
-  overflow: hidden;
-  margin: 0;
+  margin: 10px;
   position: relative;
+  overflow: hidden;
+  border: #d5d5d5 1px solid;
+  transition: all 0.2s ease-in-out;
+  border-radius: 4px;
+}
+.portfolio-thumb img {
+  display: block;
+  width: 100%;
+  height: auto;
 }
 .portfolio-overlay {
   display: -webkit-box;
